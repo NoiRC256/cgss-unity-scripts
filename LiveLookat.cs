@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
-☆☆☆ CGSS模型专用视线追踪脚本 【适配小早川紗枝 0132，0132_1011, 0132_1311 (HQ)】☆☆☆
+☆☆☆ CGSS模型专用视线追踪脚本 （默认数值适配10倍模型大小的小早川紗枝 0132，0132_1011, 0132_1311 HQ）☆☆☆
 ☆☆☆ 计算 Eye 与 Camera LookAt Handler 之间的 Vector3、Quaternion 差，得出相应x、w补偿值 ☆☆☆
-*需要将 Eye 设为 Eye Locator 的子骨骼，必要时调整 Eye Locator 旋转
+*需要将 Eye 设为 Eye Locator 的子骨骼，根据需要调整 Eye Locator 旋转
+By NoiR_CCC
 */
 
 public class LiveLookat : MonoBehaviour
 {
     [Header("俺寻思这代码能跑.exe")]
-    [Header("相机替身（钦定）")]
+    [Header("Head骨骼子级下的相机替身")]
     public GameObject LookAtHandler; 
-    //↓官模自带双眼定位GameObject↓可通过脚本同步左右眼骨骼↓（已过时，现在直接使用Eye骨骼沿EyeLocator移动）
+    //↓官模自带双眼定位骨骼↓可通过脚本同步左右眼骨骼↓（已过时，现在直接使用Eye骨骼，沿EyeLocator移动）
     [Header("左眼定位（过时）")]
     public GameObject eyeLocatorL;
     [Header("左眼")]
@@ -26,8 +27,8 @@ public class LiveLookat : MonoBehaviour
     [Header("平滑速度")]
     public float speed = 8.75f; // Lerp speed;
 
-    // 快速修改数值（未实装）
-    [Header("Var未实装，Please 在脚本内修改してください。")]
+    // 数值变量
+    [Header("变量未实装，必须在代码行内修改")]
     public float eRelativeModDivisor = 1355; // 追踪灵敏度分母
     public float QuaternionDifferenceWeight = 35; // 角度补偿灵敏度
     public float ReyeMaxOut = 0.008000f; // 右眼外侧限制
@@ -35,6 +36,7 @@ public class LiveLookat : MonoBehaviour
     public float LeyeMaxOut = -0.008000f; // 左眼外侧限制
     public float LeyeMaxInd = 0.007000f; //左眼内侧限制
 
+    //计算相机位置
     public void calcCamPos()
     {
         //==========变量区==========//
@@ -92,7 +94,7 @@ public class LiveLookat : MonoBehaviour
         //Debug.Log("Right eye Rotation Diff: "+ReyeRotationDiff);
         //Debug.Log("Left eye Rotation Diff: "+LeyeRotationDiff);
 
-        //以下内容已经没用了
+        //以下内容无效
 
      /*
          if (eLRelative.x > 0)
