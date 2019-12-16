@@ -6,8 +6,8 @@ public class JoinModel : MonoBehaviour {
     public GameObject headHead; //头部模型的Head骨骼
     public GameObject bodyHead; //身体模型的Head骨骼
     public GameObject headNeck; //头部模型的Neck骨骼
-    public GameObject bodyNeck; //身体模型的Neck骨骼 【有点绕x
-    public GameObject headPosition;//没用
+    public GameObject bodyNeck; //身体模型的Neck骨骼
+    public GameObject headPosition;//这个没用
 
     public void JoinHeadAndNeck () //(ÒωÓױ)yareyare nanodesu☆
     {
