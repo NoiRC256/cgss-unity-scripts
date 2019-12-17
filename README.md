@@ -10,7 +10,7 @@ CGSS人物模型的Head和Body是两个分开的部分 "Body hierarchy" 和 "Hea
 
 LiveLookAt.cs
 ------------
-视线追踪脚本，Head hierarchy
+视线追踪脚本，用于 Head hierarchy
 
 原理是让'Eye_L'，'Eye_R'根据相机位置左右偏移
 
@@ -31,7 +31,7 @@ LiveLookAt.cs
 
 LookAtHandler.cs
 ------------
-同步 Main Camera 的世界变换和对于 Head 的本地变换'，Head hierarchy
+将 Main Camera 的世界变换反应到 Head 的本地变换，用于 Head hierarchy
 
 把 Main Camera 和 'CamLookAt' 绑上去就行了
 
