@@ -20,7 +20,7 @@ LiveLookAt.cs
 
 * 使 'Eye_locator_L'，'Eye_locator_R' 作为 'Eye_L'，'Eye_R' 的父级，用来设定 'Eye_L'，'Eye_R' 的左右移动轨道
 
-* 在 Head heiarchy 下新建一个 GameObject 'CamLookAt'，变换归零，用于反应 Main Camera 的 Head 本地变换
+* 在 Head heiarchy 下新建一个 GameObject 'CamLookAt'，变换为零，用于反应 Main Camera 的 Head 本地变换
 
 * 绑定 'CamLookAt'，'Eye_L'，'Eye_R'
 
