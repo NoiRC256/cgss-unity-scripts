@@ -30,9 +30,9 @@ public class LiveLookat : MonoBehaviour
     public float speed = 8.75f; // Lerp speed;
 
     // 数值变量
-    [Header("变量未实装，必须在代码行内修改")]
-    public float eRelativeModDivisor = 1355; // 追踪灵敏度分母
-    public float QuaternionDifferenceWeight = 35; // 角度补偿灵敏度
+    [Header("变量未实装，只能在行内修改")]
+    public float eRelativeModDivisor = 175; // 追踪灵敏度（越小越灵敏）
+    public float QuaternionDifferenceWeight = 1.5; // 角度补偿灵敏度（越大越灵敏）
     public float ReyeMaxOut = 0.008000f; // 右眼外侧限制
     public float ReyeMaxIn = -0.007000f; //右眼内侧限制
     public float LeyeMaxOut = -0.008000f; // 左眼外侧限制
@@ -90,14 +90,14 @@ public class LiveLookat : MonoBehaviour
         eyeLeft.transform.localPosition = desL; // Set new target position | 应用新位置
         eyeLeft.transform.localPosition = Vector3.Lerp(eyeLeft.transform.localPosition, desL, Time.deltaTime * speed);
 
-        //==========测试==========//
+        //==========测试Log==========//
 
         //Debug.Log("Right Eye X Modification: " + (eRTarget.x));
         Debug.Log("Left Eye X Modification: " + (eLTarget.x));
         //Debug.Log("Right eye Rotation Diff: "+ReyeRotationDiff);
         //Debug.Log("Left eye Rotation Diff: "+LeyeRotationDiff);
 
-        //以下内容无效
+        //以下无效
 
      /*
          if (eLRelative.x > 0)
