@@ -1,7 +1,7 @@
 CGSS Unity Scripts
 ========
 
-☆在Unity里捣鼓CGSS人物模型的时候大概用得到的脚本
+☆在Unity里捣鼓CGSS人物模型的时候可能用得到的脚本
 
 JoinModel.cs
 ------------
