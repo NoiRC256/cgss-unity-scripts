@@ -21,10 +21,11 @@ public class JoinModel : MonoBehaviour {
     }
     public void Start ()
     {
-        JoinHeadAndNeck(); //初始化同步☆
+        //初始化同步
+        JoinHeadAndNeck();
     }
     public void Update()
     {
-        JoinHeadAndNeck(); //维持同步☆
-    }
+        //维持同步
+        JoinHeadAndNeck();
 }
