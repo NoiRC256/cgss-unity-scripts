@@ -31,7 +31,9 @@ LiveLookAt.cs
 
 LookAtHandler.cs
 ------------
-将 Main Camera 的世界变换反应到 Head 的本地变换，用于 Head hierarchy
+视线追踪辅助脚本，用于 Head hierarchy
+
+将 Main Camera 的世界变换反应到 Head 的本地变换
 
 把 Main Camera 和 'CamLookAt' 绑上去就行了
 
