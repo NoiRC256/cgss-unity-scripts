@@ -9,7 +9,8 @@ public class JoinModel : MonoBehaviour {
     public GameObject bodyNeck; //身体模型的Neck骨骼
     public GameObject headPosition;//这个没用
 
-    public void JoinHeadAndNeck () //(ÒωÓױ)yareyare nanodesu☆
+    //功能
+    public void JoinHeadAndNeck ()
     {
         //Head位置同步
         headHead.transform.rotation = bodyHead.transform.rotation;
@@ -19,6 +20,7 @@ public class JoinModel : MonoBehaviour {
         headNeck.transform.rotation = bodyNeck.transform.rotation;
         headNeck.transform.position = bodyNeck.transform.position;
     }
+    
     public void Start ()
     {
         //初始化同步
