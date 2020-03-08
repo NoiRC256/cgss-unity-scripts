@@ -4,7 +4,7 @@ using UnityEngine;
 
 /*
 ☆☆☆ CGSS模型专用视线追踪脚本 ☆☆☆
-默认数值适配10倍大小的 Kobayakawa Sae 0132，0132_1011, 0132_1311 HQ 模型
+默认数值适合10倍大小的 Kobayakawa Sae 0132，0132_1011, 0132_1311 HQ 模型
 计算 Eye 与 Camera LookAt Handler 之间的 Vector3、Quaternion 差，输出相应的x、w补偿值
 *需要将 Eye 设为 Eye Locator 的子骨骼，按需调整 Eye Locator 旋转
 
@@ -14,9 +14,9 @@ By NoiR_CCC
 public class LiveLookat : MonoBehaviour
 {
     [Header("俺寻思这代码能跑.exe")]
-    [Header("Head骨骼子级下的相机替身")]
+    [Header("相机替身 'LookAtHandler' ")]
     public GameObject LookAtHandler; 
-    //↓官模自带双眼定位骨骼↓可通过脚本同步左右眼骨骼↓（已过时，现在直接使用Eye骨骼，沿EyeLocator移动）
+    //↓官模自带双眼定位骨骼↓可通过脚本同步左右眼骨骼↓（过时，现在直接使Eye骨骼沿EyeLocator左右移动）
     [Header("左眼定位（过时）")]
     public GameObject eyeLocatorL;
     [Header("左眼")]
