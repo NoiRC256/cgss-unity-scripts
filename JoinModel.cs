@@ -12,11 +12,11 @@ public class JoinModel : MonoBehaviour {
     //功能
     public void JoinHeadAndNeck ()
     {
-        //Head位置同步
+        //Head同步
         headHead.transform.rotation = bodyHead.transform.rotation;
         headHead.transform.position = bodyHead.transform.position;
 
-        //Neck位置同步
+        //Neck同步
         headNeck.transform.rotation = bodyNeck.transform.rotation;
         headNeck.transform.position = bodyNeck.transform.position;
     }
