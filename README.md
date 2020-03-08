@@ -27,6 +27,7 @@ LiveLookAt.cs
 * 变量的默认数值适用于十倍大小的模型，可以根据需要自行调整数值
 
 'Max Out'（74行）=视线向外偏移限制
+
 'Max In'（87行）=视线向内偏移限制
 
 另外两个 'eRelativeModDivisor'（72, 85行）和 'QuaternionDifferenceWeight'（73, 86行）是敏感度系数
