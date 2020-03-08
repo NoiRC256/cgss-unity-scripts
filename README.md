@@ -5,7 +5,7 @@ CGSS Unity Scripts
 
 JoinModel.cs
 ------------
-CGSS人物模型默认头身分离，这个脚本可以使Head和Body在播放动画时同步位置
+CGSS人物模型默认头身分离，这个脚本可以使Head和Body在播放动画时同步姿态
 
 
 LiveLookAt.cs
