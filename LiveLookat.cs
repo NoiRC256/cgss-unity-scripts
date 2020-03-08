@@ -45,6 +45,7 @@ public class LiveLookat : MonoBehaviour
         Vector3 camPos = LookAtHandler.transform.localPosition; // Camera LookAt Handler Position | 相机 世界位置→本地位置
 	
 	// Eye Locator calculations are unnecessary
+	// 过时功能，已移除
         /*
         Vector3 eLOrigin = eyeLocatorL.transform.position; // Left Eye World Position | 左眼定位 世界位置
         Vector3 eROrigin = eyeLocatorR.transform.position; // Right Eye World Position |右眼定位 世界位置
