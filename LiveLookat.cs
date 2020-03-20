@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
-☆☆☆ CGSS模型专用视线追踪脚本 ☆☆☆
-默认数值适合10倍大小的 Kobayakawa Sae 0132，0132_1011, 0132_1311 HQ 模型
-计算 Eye 与 Camera LookAt Handler 之间的 Vector3、Quaternion 差，输出相应的x、w补偿值
-*需要将 Eye 设为 Eye Locator 的子骨骼，按需调整 Eye Locator 旋转
+☆☆☆ CGSS人物模型视线追踪脚本 By NoiR_CCC ☆☆☆
+利用新建的 LookAtHandler 把相机世界变换映射到相对于Head的本地变换，再计算 Eye 与 CamLookAt 之间的 Vector3，Quaternion 差，输出相应的x，w补偿值
 
-By NoiR_CCC
+*默认数值适合10倍大小的 Kobayakawa Sae 0132，0132_1011, 0132_1311 HQ 模型
+*需要将左/右 Eye 设为左/右 Eye Locator 的子骨骼，分别调整 Eye Locator 旋转值使其与面部平行
 */
 
 public class LiveLookat : MonoBehaviour
@@ -29,14 +28,14 @@ public class LiveLookat : MonoBehaviour
     [Header("平滑速度")]
     public float speed = 8.75f; // Lerp speed;
 
-    // 数值变量
+    // 数值
     [Header("变量未实装，只能在行内修改")]
     public float eRelativeModDivisor = 175; // 追踪灵敏度（越小越灵敏）
     public float QuaternionDifferenceWeight = 1.5; // 角度补偿灵敏度（越大越灵敏）
-    public float ReyeMaxOut = 0.008000f; // 右眼外侧限制
-    public float ReyeMaxIn = -0.007000f; //右眼内侧限制
-    public float LeyeMaxOut = -0.008000f; // 左眼外侧限制
-    public float LeyeMaxInd = 0.007000f; //左眼内侧限制
+    public float ReyeMaxOut = 0.00625f; // 右眼外侧限制
+    public float ReyeMaxIn = -0.00785f; //右眼内侧限制
+    public float LeyeMaxOut = -0.00625f; // 左眼外侧限制
+    public float LeyeMaxInd = 0.00785f; //左眼内侧限制
 
     //计算相机位置
     public void calcCamPos()
