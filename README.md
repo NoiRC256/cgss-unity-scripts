@@ -20,7 +20,7 @@ LiveLookAt.cs
 
 * 使 'Eye_locator_L'，'Eye_locator_R' 作为 'Eye_L'，'Eye_R' 的父级，用来规定 'Eye_L'，'Eye_R' 的移动轨道
 
-* 在 Head heiarchy 下新建 'CamLookAt'，变换为零，用于反应 Main Camera 相对于 Head 的本地变换
+* 在 Head heiarchy 下新建 'CamLookAt'，变换为零，绑定到 LookAtHandler.cs，用于反应相机相对于 Head 的本地变换
 
 * 绑定 'CamLookAt'，'Eye_L'，'Eye_R'
 
@@ -34,9 +34,9 @@ LookAtHandler.cs
 ------------
 视线追踪辅助脚本，用于 Head hierarchy，配合 LiveLookAt.cs
 
-将 Main Camera 的世界变换反应到 Head 的本地变换
+将相机的世界变换转换为 Head 本地变换
 
-把 Main Camera 和新建的 'CamLookAt' 绑上去就ok
+把相机和新建的 'CamLookAt' 绑上去就ok
 
 
 LiveLookAt_v006.cs
