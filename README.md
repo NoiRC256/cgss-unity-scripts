@@ -10,7 +10,7 @@ CGSS人物模型默认头身分离，这个脚本可以使Head和Body在播放�
 
 LiveLookAt.cs
 ------------
-视线追踪脚本，用于 Head hierarchy
+视线追踪脚本，用于 Head hierarchy，需要 LookAtHandler.cs
 
 原理是让 'Eye_L'，'Eye_R' 根据相机位置左右移动
 
@@ -32,7 +32,7 @@ LiveLookAt.cs
 
 LookAtHandler.cs
 ------------
-视线追踪辅助脚本，用于 Head hierarchy
+视线追踪辅助脚本，用于 Head hierarchy，配合 LiveLookAt.cs
 
 将 Main Camera 的世界变换反应到 Head 的本地变换
 
